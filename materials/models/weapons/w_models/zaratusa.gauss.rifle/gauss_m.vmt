@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/v_models/zaratusa.gauss.rifle/gauss_m"
+	"$phong" "1"
+	"$phongexponent" "50"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[1 3 6]"
+
+	"$translucent" "1"
+}
