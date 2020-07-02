@@ -59,7 +59,7 @@ function SWEP:GetViewModelPosition(pos, ang)
 	if (!self.IronSightsPos) then return pos, ang end
 
 	local bIron = self:GetIronsights()
-	if (bIron != self.bLastIron) then
+	if (bIron ~= self.bLastIron) then
 		self.bLastIron = bIron
 		self.fIronTime = CurTime()
 
