@@ -66,7 +66,7 @@ function SWEP:PrimaryAttack(worldsnd)
 		local owner = self:GetOwner()
 		owner:GetViewModel():StopParticles()
 
-		if (!worldsnd) then
+		if (not worldsnd) then
 			self:EmitSound(self.Primary.Sound, self.Primary.SoundLevel)
 		elseif SERVER then
 			sound.Play(self.Primary.Sound, self:GetPos(), self.Primary.SoundLevel)
@@ -100,7 +100,7 @@ function SWEP:PrimaryAttack(worldsnd)
 
 		self:UpdateNextIdle()
 
-		if (IsValid(owner) and !owner:IsNPC() and owner.ViewPunch) then
+		if (IsValid(owner) and not owner:IsNPC() and owner.ViewPunch) then
 			owner:ViewPunch(Angle(math.Rand(-0.2, -0.1) * self.Primary.Recoil, math.Rand(-0.1, 0.1) * self.Primary.Recoil, 0))
 		end
 
@@ -125,7 +125,7 @@ function SWEP:SecondaryAttack(worldsnd)
 		self:SetNextPrimaryFire(CurTime() + self.Secondary.Delay)
 		self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
 
-		local bIronsights = !self:GetIronsights()
+		local bIronsights = not self:GetIronsights()
 		self:SetIronsights(bIronsights)
 		if SERVER then
 			self:SetZoom(bIronsights)

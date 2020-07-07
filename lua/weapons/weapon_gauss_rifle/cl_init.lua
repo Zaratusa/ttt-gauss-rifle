@@ -56,7 +56,7 @@ end
 local LOWER_POS = Vector(0, 0, -2)
 local IRONSIGHT_TIME = 0.25
 function SWEP:GetViewModelPosition(pos, ang)
-	if (!self.IronSightsPos) then return pos, ang end
+	if (not self.IronSightsPos) then return pos, ang end
 
 	local bIron = self:GetIronsights()
 	if (bIron ~= self.bLastIron) then
@@ -73,7 +73,7 @@ function SWEP:GetViewModelPosition(pos, ang)
 	end
 
 	local fIronTime = self.fIronTime or 0
-	if (!bIron and fIronTime < CurTime() - IRONSIGHT_TIME) then
+	if (not bIron and fIronTime < CurTime() - IRONSIGHT_TIME) then
 		return pos, ang
 	end
 
@@ -82,7 +82,7 @@ function SWEP:GetViewModelPosition(pos, ang)
 	if (fIronTime > CurTime() - IRONSIGHT_TIME) then
 		mul = math.Clamp((CurTime() - fIronTime) / IRONSIGHT_TIME, 0, 1)
 
-		if (!bIron) then
+		if (not bIron) then
 			mul = 1 - mul
 		end
 	end
