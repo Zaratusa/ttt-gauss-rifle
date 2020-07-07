@@ -3,8 +3,6 @@ AddCSLuaFile("shared.lua")
 
 include('shared.lua')
 
-resource.AddWorkshop("646754302")
-
 function SWEP:Think()
 	local idletime = self:GetNWFloat("NextIdle")
 
