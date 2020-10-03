@@ -3,6 +3,9 @@ include('shared.lua')
 LANG.AddToLanguage("english", "gauss_name", "M2014 Gauss")
 LANG.AddToLanguage("english", "gauss_desc", "Fires heavy explosives.")
 
+LANG.AddToLanguage("Русский", "gauss_name", "M2014 Gauss")
+LANG.AddToLanguage("Русский", "gauss_desc", "Стреляет тяжёлой взрывчаткой.")
+
 SWEP.PrintName = "gauss_name"
 SWEP.Slot = 6
 SWEP.Icon = "vgui/ttt/icon_gauss_rifle"
